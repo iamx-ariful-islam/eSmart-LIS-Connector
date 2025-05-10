@@ -1,0 +1,158 @@
+eSmart LIS Connector is a communication bridge between medical pathology analyzers and LIS servers. It supports both serial and network connections in unidirectional or bidirectional modes using ASTM or HL7 protocols. The connector receives raw byte data, parses it, and sends it to a local or API-based server/database. It is capable of handling multiple analyzers simultaneously, ensuring seamless and real-time data communication.
+
+
+
+1. First download, install and configure latest version of python on your system If not installed.
+    https://www.python.org/downloads/
+
+2. Create a folder and set name. (Exp. folder_name "Project").
+
+3. Unzip "eSmart LIS Connector.zip" file into "Project" folder.
+
+4. Open "Command Prompt" into "Project"  folder.
+
+5. Then create python virtual environment into "Project" folder.
+    python -m venv <virtual_folder_name>
+    Exp. virtual_folder_name "myvenv"
+    python -m venv myvenv
+
+6. Goto "myvenv" folder and active virtual environment.
+    cd myvenv/Script
+    activate
+
+7. Then go back from "myvenv" folder.
+    cd ..
+    cd ..
+
+8. Goto "eSmart LIS Connector".
+    cd "eSmart LIS Connector"
+
+9. Then install project dependencies
+    pip install -r requirements.txt
+
+10. After install all dependencies, run project.
+    python MainWindow.py
+
+
+
+You can also directly install all dependencies and run project.
+After open application, setup all application configuration.
+
+1. Click "File" menu button for open file menu option then click:
+	1. Add Info
+		1. Add Hospital Information
+			1. Enter hospital name.
+			2. Enter hospital address.
+			3. Enter hospital mobile (Optional).
+		2. Add Company Information
+			1. Enter company name.
+			2. Enter company website url.
+			3. Enter company mobile.
+			4. Add company logo. For add logo click 'Browse Logo' button then select the logo from directory and click open.
+		After enter all necessary information click the 'Save Info' button for save.
+		Note: If need update information then select the information from the table and enter necessary information and click the 'Save Info' button for update.
+		Close the "Add Info" page.
+
+	2. Configure
+		1. Check COM Port: Show and hide 'Check' button and 'Check' button check COM port is available or not.
+		2. View Password: Show and hide 'Show' button and 'Show' button view the password.
+		3. Auto Connection: Show and hide 'Connect' button and if 'Connect' button is hide then automatically connect to all active analyzer(s) after wait some seconds.
+		4. Clear Logs: Show and hide 'Clear Logs' button and if 'Clear Logs' button is hidden then you can find it into Edit->Clear.
+		5. Show Analyzer Info: Show and hide total analyzer(s) and active analyzer(s) information.
+		6. Active API: If active then data will be sent to the server database using the active API information or sent extra database like- SQLite3, Oracle, MySQL Server, MongoDB etc.
+		7. Waiting Time:
+			1. Enter wait time as second and click the 'Update Time'.
+			2. After counting the time(Second) automatically connect to all analyzers and if 'Connect' button is hide then this is work.
+
+	3. Parameter(s)
+		1. Select Category or Analyzer Name.
+		2. Select Parameter.
+		3. Check or Uncheck 'Round results'. If check then enter 'round' or '0'. Default value: 'round'.
+		4. Check or Uncheck 'In-Decrease results'. if check then enter '+10', '-20', '*1000', '/30' etc. Exp. PLT = 271 * 1000 = 271000.
+		5. If need to add new parameter then check the 'Add New Param' and enter parameter name then click the 'Add New' button to save.
+		6. If need to remove or delete any parameter then check the 'Remove Param' and 'Select Parameter' then click the 'Remove' button to remove or delete.
+		7. Select and enter necessary information for setup parameters and click the 'Add New' button to add information.
+		8. Select any one of the three(3) tables then click the 'Remove' button if you want to remove or delete setup parameters information.
+		Note: There is no edit/update option if you want to that then first remove information and add as new.
+
+	4. Setup Analyzer(s)
+		1. Select Analyzer or click any one from table then enter necessary information and click the 'Update' button for update.
+		2. If need analyzer active for connect then check 'Active for Connect' and click the 'Update' button for save.
+		3. If show 'Check' button and if you want to check then first enter COM port name like- COM1, COM2, ... etc and then click the 'Check' button.
+		Note: If connection type is 'Serial' then show the baudrate list box for help.
+
+	5. Connect Extra Database or Connect API Server
+		1. Select Extra Database or click any one from table then enter necessary information and click the 'Setup' button for setup extra database.
+		2. Enter db host. (If need then enter database host name or url).
+		3. Enter db port. (If need then enter database port no).
+		4. Enter db user. (If need then enter database user name).
+		5. Enter db pass. (If need then enter database password).
+		6. Enter db name. (If need then enter database name).
+		7. Enter table name. (If need then enter database table name).
+		8. If show 'Show' button and if you want to view password then first enter database password or select any database information and then click the 'Show' button. Exp. *****(hide)=12345(show).
+		9. If need database active for sent data into database then check 'Active for Connect' and click the 'Setup' button for setup.
+		   or
+		1. Enter api url.
+		2. Enter API username (required if the API url requires authentication).
+		3. Enter api password (required if the API url requires authentication).
+		4. Enter API token(Optional). (required if the API url requires authorization).
+		5. Enter api proxy(Optional).
+		6. Enter api cookie(Optional).
+		Note: Enter required api information then click 'Add API' button to save.
+
+	6. Exit: Close/Exit the program.
+
+	Note: If need update information then select the information from the table and enter necessary information and click the 'Save Info' button.
+
+2. Click "Edit" menu button for open edit menu option then click:
+	1. Undo: Undo logs data from logs terminal display.
+	2. Redo: Redo logs data into logs terminal display.
+	3. Clear: Clear the logs data from logs terminal display.
+	4. Output: Read logs data from logs terminal display and create text file into output folder. (Exp. 'output/logs_113958.txt')
+
+3. Click "Help" menu button for open help menu option then click:
+	1. Welcome
+		1. Display the welcome page with some program notes.
+		2. Enter the app key and click '>> Register' to register the app (if using the app registration system). Default app key: '#ELIS-eSmart-LIS-#v20241-Connector-#2025'.
+	2. Documents: Instructions on how to connect an analyzer to a host computer or LIS system, including details on network or serial connections, network settings, host communication, IP address, port numbers, protocols, modes and more.
+	3. Create Note: Create documents note and name it 'doc_note.txt'.
+	4. About: Display the about page, which includes information about the developer and the maintainer.
+	5. Dark Mode or Light Mode:
+		1. If click 'Dark Mode' to switch to the dark theme.
+		2. If click 'Light Mode' to switch to the light theme.
+
+4. Click "Install Packages":
+	If click 'Install Packages' then Automatically install requirements packages from 'requirements.txt' file.
+
+5. 'Imposed 2 out of 22': Show active analyzer(s) information out of total analyzer(s) information. (Exp. active analyzer(s)=2 and total analyzer(s)=22).
+
+6. Click "Select All" or "Deselect All":
+	If click the 'Select All' menu button then select or checked all active analyzer(s) for communication.
+	if click the 'Deselect All' menu button then desleect or unchecked all active analyzer(s) for communication.
+
+
+
+1. Click "Clear Logs": Clear the logs data from logs terminal display.
+
+2. Click "Connect" or "Disconnect":
+	if click the 'Connect' button Then try to connect to the selected analyzer(s).
+	if click the 'Disconnect' button then disconnected from the analyzer(s).
+
+Extra Notes:
+	1. Company logo is clickable and if you click the company logo then open maintenance company website or web url on the default browser with new tab.
+	2. 'J O N A K I' is clickable and if you click then open developer website or web url on the default browser with new tab.
+	3. 'logs' folder contain the app logger data.
+
+
+
+Remember: After complete the all configuration then close the application and open application again.
+
+
+
+Note:
+----------------
+1. you can use directly or use after creating virtual environment.
+2. If needed then update pip:
+   python.exe -m pip install --upgrade pip.
+
+Enjoy thyself with Project...! & If any query or any trouble then contact or see the video.

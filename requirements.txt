@@ -1,0 +1,8 @@
+hl7==0.4.5
+psutil==6.0.0
+pillow==10.4.0
+pymysql==1.1.1
+pymongo==4.10.1
+requests==2.32.3
+pyserial==3.5
+cx_Oracle==8.3.0

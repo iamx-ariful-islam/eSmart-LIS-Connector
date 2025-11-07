@@ -5,24 +5,25 @@
 [Tkinter](https://en.wikipedia.org/wiki/Tkinter) is a Python binding to the Tk GUI toolkit. It is the standard Python interface to the Tk GUI toolkit, and is Python's defacto standard GUI.
 <br/>
 
-**eSmart LIS Connector** is a communication bridge between medical pathology analyzers and LIS servers. It supports both serial and network connections in unidirectional or bidirectional modes using ASTM or HL7 protocols. The connector receives raw byte data, parses it and sends it to a local or API-based server/database. It is capable of handling multiple analyzers simultaneously, ensuring seamless and real-time data communication.
+**eSmart LIS Connector** is a communication bridge between medical pathology analyzers and LIS servers. It supports both serial and network connections in unidirectional or bidirectional modes using ASTM or HL7 protocols. The connector receives raw byte data, parses it, and sends it to a local or API-based server/database. It is capable of handling multiple analyzers simultaneously, ensuring seamless and real-time data communication.
 <br/>
 
 **`eSmart LIS Connector` supports serial and network communication protocols, simulates and exchanges data using ASTM and HL7 formats and is compatible with `all types of pathology analyzers`.**
 
 
-## Task Descriptions
+## Task Description
 This project is fully customizable and dynamic. It is designed to build a Python and Tkinter-based desktop application that connects directly to any type of analyzer via network or serial port communication, receives data, parses the results and sends them to an api server or database. You can add pathologist information, doctor information with signature. Everyday create report folder with file name is current date and printed result stored as pdf. Already `35+ Company or Category Analyzers` use this. Here are some special features added.
 
-* **Theme Switch:** Toggle between Dark and Light modes for better visibility.
-* **Running Time Clock:** Displays the application's digital uptime clock.
-* **Log File Generation:** Saves terminal logs as .txt files in the output folder for future debugging or reference.
-* **Live Data from Analyzers:** Displays parsed data received from multiple analyzers in real time.
-* **Multi-Target Data Sync:** Sends parsed data to multiple databases or API servers simultaneously.
+
+* **Change theme**
+* **Running time clock**
+* **Generate txt file of logs data**
+* **Live data receive from multiple analyzers**
+* **Send data to multiple database or API server**
 
 
-## Task Requirements & Testing Environments
-This project was developed using the latest operating systems, software and tools.
+## Task Requirements & Testing Environment
+This project was developed using the latest operating systems, software, and tools.
 
 * **Operating System :** Windows11, Kali Linux
 * **Software :** Python3.12 and Visual Studio Code
@@ -48,14 +49,16 @@ First [download](https://www.python.org/downloads/), install and configure [pyth
 
 ```bash
 esmart-lis-connector/
+│
 ├── assets/
 ├── components/
 ├── database/
 ├── logs/
 ├── output/
 ├── screenshots/
-|   ├── welcome.png
-|   ├── ...
+│   ├── welcome.png
+│   ├── ...
+│
 ├── doc_note.txt
 ├── MainWindow.py        # main file
 ├── notes.txt            # how to use
@@ -68,88 +71,74 @@ esmart-lis-connector/
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/iam-ariful-islam/esmart-lis-connector.git
+git clone https://github.com/iamx-ariful-islam/esmart-lis-connector.git
 ```
 
 
 ## Notes
 The `requirements.txt` file, lists of all the Python libraries that my "**_esmart lis connector system_**" depends on and installs those packages from the file and for better use, configure the system by looking at the `notes.txt` name file:
 
-```
+```bash
 pip install -r requirements.txt
-```
-
-### **or**
-
-```
+# or
 sudo pip install -r requirements.txt
 ```
 
 
-## Project screenshots
+## Screenshots
+Here are some screenshots of the `eSmart LIS Connector` project:
+
 **Welcome Page**<br/>
-<img alt="welcome" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/welcome.png" />
-
+![welcome](screenshots/welcome.png)<br/>
 **Main Window**<br/>
-<img alt="main" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/main.png" />
-
+![main](screenshots/main.png)<br/>
 **Add Information**<br/>
-<img alt="add_info" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/add_info.png" />
-
+![add_info](screenshots/add_info.png)<br/>
 **System Configure**<br/>
-<img alt="system_configure" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/system_configure.png" />
-
+![system_configure](screenshots/system_configure.png)<br/>
 **Parameters Setup**<br/>
-<img alt="setup_parameters" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/setup_parameters.png" />
-
+![setup_parameters](screenshots/setup_parameters.png)<br/>
 **Analyzers Setup**<br/>
-<img alt="setup_analyzers" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/setup_analyzers.png" />
-
+![setup_analyzers](screenshots/setup_analyzers.png)<br/>
 **Setup Extra Database**<br/>
-<img alt="setup_extra_database" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/setup_extra_database.png" />
-
+![setup_extra_database](screenshots/setup_extra_database.png)<br/>
 **API Server Setup**<br/>
-<img alt="setup_api_server" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/setup_api_server.png" />
-
+![setup_api_server](screenshots/setup_api_server.png)<br/>
 **Code Snapshot**<br/>
-<img alt="code_snapshot" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/code_snapshot.png" />
-
+![code_snapshot](screenshots/code_snapshot.png)<br/>
 **Output-Data is sent to a MySQL server | Old Version | Windows 7**<br/>
-<img alt="data_send" src="https://github.com/iam-ariful-islam/eSmart-LIS-Connector/blob/main/screenshots/data_send.png" />
-
-
-## Code Explanation
-Data received from analyzers is parsed according to the protocol, queued for processing and then inserted into the appropriate database or forwarded to an API server. The GUI is designed with ease-of-use and diagnostics in mind, making the tool both powerful and accessible.
-
-
-## Acknowledgments
-* **Python & Tkinter:** For enabling a robust, platform-independent GUI.
-* **PySerial & Socket Libraries:** For seamless serial and network communication.
-* **ASTM/HL7 Community:** For providing documentation and open protocol references.
-* **Stack Overflow & GitHub:** For helpful discussions, examples and troubleshooting support.
-* **Open Source Community:** For inspiration, libraries and continuous contributions to healthcare integration tools.
+![data_send](screenshots/data_send.png)<br/>
 
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Fork the repository.
-* Create a new branch (git checkout -b feature-name).
-* Commit your changes (git commit -am 'Add new feature').
-* Push to your branch (git push origin feature-name).
-* Create a new Pull Request.
+Contributions, suggestions, and feedback are always welcome! ❤️
+To contribute:
 
-Please make sure to update tests as appropriate.
+1. Fork the repository
+1. Create a new branch (`feature/new-feature`)
+1. Commit your changes
+1. Push and submit a Pull Request
+
+💬 You can also open an issue if you’d like to discuss a feature or report a bug.
 
 
 ## For more or connect with me
+
 <p align='center'>
-  <a href="https://github.com/iam-ariful-islam"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://twitter.com/am_ariful_islam"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://bd.linkedin.com/in/im-ariful-islam"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.facebook.com/jonakisoft.net/"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/iamx-ariful-islam"><img src="https://img.shields.io/badge/GitHub-iamx--ariful--islam-black?style=for-the-badge&logo=github" /></a>&nbsp;&nbsp;
+  <a href="https://bd.linkedin.com/in/iamx-ariful-islam"><img src="https://img.shields.io/badge/LinkedIn-Md.%20Ariful%20Islam-blue?style=for-the-badge&logo=linkedin" /></a>&nbsp;&nbsp;
+  <a href="https://x.com/mx_ariful_islam"><img src="https://img.shields.io/badge/X-Md.%20Ariful%20Islam-black?style=for-the-badge&logo=x&logoColor=white" /></a>&nbsp;&nbsp;
+  <a href="https://www.facebook.com/iamx.ariful.islam/"><img src="https://img.shields.io/badge/Facebook-MD.%20Ariful%20Islam-%231877F2.svg?style=for-the-badge&logo=facebook&logoColor=white" /></a>
 </p>
 
 
 ## License
+
 The [MIT](https://choosealicense.com/licenses/mit/) License (MIT)
+
+
+## 💖 Thank You for Visiting!
+
+> “Good design is about making things simple yet significant”  
+> — *Md. Ariful Islam*

@@ -88,6 +88,19 @@ sudo pip install -r requirements.txt
 ## Screenshots
 Here are some screenshots of the `eSmart LIS Connector` project:
 
+### Version 2026.2 (PyQt6)
+
+**Login Page**<br/>
+![login_page](screenshots/login_v2.png)<br/>
+**Main Window**<br/>
+![main_page](screenshots/main_v2.png)<br/>
+**Settings Page**<br/>
+![settings_page](screenshots/settings_v2.png)<br/>
+**Version Page**<br/>
+![version_page](screenshots/version_v2.png)<br/>
+
+### Version 1-M15 (Tkinter)
+
 **Welcome Page**<br/>
 ![welcome](screenshots/welcome.png)<br/>
 **Main Window**<br/>
